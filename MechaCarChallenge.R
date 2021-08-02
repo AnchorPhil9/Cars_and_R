@@ -29,11 +29,6 @@ lot_2 <- subset(Coils, Manufacturing_Lot == "Lot2")
 lot_3 <- subset(Coils, Manufacturing_Lot == "Lot3")
 
 # Now we refactor 15.6.2 (2021) code for our respective t-tests.
-t.test(log10(lot_1$PSI), mu=mean(log10(lot_1$PSI)))
-t.test(log10(lot_2$PSI), mu=mean(log10(lot_2$PSI)))
-t.test(log10(lot_3$PSI), mu=mean(log10(lot_3$PSI)))
-# In these tests, we arrive at p-values of exactly 1.
-# If our significance level is 0.05 percent, then with greater p-values of 1,
-# we cannot accept the alternative hypotheses that the mean PSI for each lot are
-# statistically different from the population mean PSI of 1500.
-# 
+t.test(log10(lot_1$PSI), mu=1500)
+t.test(log10(lot_2$PSI), mu=1500)
+t.test(log10(lot_3$PSI), mu=1500)
